@@ -111,4 +111,4 @@ def _mock_quote_stream():
 if __name__ == '__main__':
     # 启动后台行情推送任务
     socketio.start_background_task(_mock_quote_stream)
-    socketio.run(app, host='0.0.0.0', port=int(os.getenv('PORT', '5000')))
+    socketio.run(app, host='0.0.0.0', port=int(os.getenv('PORT', '5005')))

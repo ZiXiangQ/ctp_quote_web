@@ -1,7 +1,13 @@
+/*
+ * @Author: qiuzx
+ * @Date: 2025-09-09 22:27:21
+ * @LastEditors: qiuzx
+ * @Description: description
+ */
 import { io } from 'socket.io-client'
 
 function getBackendUrl() {
-  return localStorage.getItem('backendUrl') || 'http://127.0.0.1:5000'
+  return localStorage.getItem('backendUrl') || 'http://127.0.0.1:5005'
 }
 
 let socket
