@@ -24,10 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -59,10 +58,20 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* 调试抽屉样式 */
+.q-drawer {
+  z-index: 2000 !important;
+}
+
+.q-drawer__backdrop {
+  z-index: 1999 !important;
 }
 
 @media (prefers-color-scheme: light) {

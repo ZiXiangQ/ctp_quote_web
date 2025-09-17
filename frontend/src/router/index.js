@@ -1,16 +1,28 @@
-import { createRouter, createWebHistory } from 'vue-router'
+/*
+ * @Author: qiuzx
+ * @Date: 2025-09-09 22:17:58
+ * @LastEditors: qiuzx
+ * @Description: description
+ */
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-  { path: '/', redirect: '/quotes' },
-  { path: '/quotes', name: 'quotes', component: () => import('../pages/Quotes.vue') },
-  { path: '/subscribe', name: 'subscribe', component: () => import('../pages/Subscribe.vue') },
-  { path: '/settings', name: 'settings', component: () => import('../pages/Settings.vue') },
-  { path: '/about', name: 'about', component: () => import('../pages/About.vue') },
-]
+  { path: "/", redirect: "/quotes" },
+  {
+    path: "/quotes",
+    name: "quotes",
+    component: () => import("../pages/quotes/Quotes.vue")
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: () => import("../pages/About.vue")
+  }
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-})
+  routes
+});
 
-export default router
+export default router;

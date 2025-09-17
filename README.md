@@ -38,30 +38,52 @@ ctp-quote-app/
   - 简要说明项目。
 
 ## 运行
-1) 后端
+
+### 1) 后端服务
+
+**快速启动（推荐）**：
+```bash
+python scripts/start_server.py
 ```
-./scripts/run_backend.sh
+
+**完整安装**：
+```bash
+python scripts/start_server.py full
 ```
-或手动：
+
+**帮助信息**：
+```bash
+python scripts/start_server.py --help
 ```
+
+**手动启动**：
+```bash
 cd backend
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
-健康检查：`GET http://127.0.0.1:5000/api/health`
 
-2) 前端
+**健康检查**：
+```bash
+curl http://172.18.141.52:5005/api/health
 ```
-./scripts/run_frontend.sh
+
+### 2) 前端服务
+
+**使用脚本启动**：
+```bash
+python scripts/start_frontend.py
 ```
-或手动：
-```
+
+**手动启动**：
+```bash
 cd frontend
-npm i
-npm run dev -- --port 5173
+npm install
+npm run dev
 ```
-访问：`http://localhost:5173`
+
+**访问地址**：`http://localhost:5173`
 
 > 如需修改后端地址，请在“设置”页调整（会存入 localStorage）。
 
